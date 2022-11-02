@@ -69,7 +69,7 @@ async def LongPoll(host, timeout):
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
-    loop.create_task("tcp://localhost:2222", 10)
+    loop.create_task(LongPoll("tcp://localhost:2222", 10))
     executor.start_polling(dp, skip_updates= True)
 
 
